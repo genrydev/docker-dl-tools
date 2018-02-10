@@ -10,7 +10,8 @@ RUN apt-get update -qq && apt-get install -qqy \
   curl \
   megatools \
   python \
-  httrack
+  httrack \
+  aria2
     
 #Install last youtube-dl version
 
