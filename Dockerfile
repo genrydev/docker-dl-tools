@@ -11,7 +11,8 @@ RUN apt-get update -qq && apt-get install -qqy \
   megatools \
   python \
   httrack \
-  aria2
+  aria2 \
+  transmission
     
 #Install last youtube-dl version
 
