@@ -21,9 +21,9 @@ RUN chmod a+rx /usr/local/bin/youtube-dl
 
 #Create alias
 
-RUN echo -e '#!/bin/bash\nyoutube-dl --no-progress --quiet --ignore-errors' > /usr/bin/yd && \
+RUN echo -e '#!/bin/bash\nyoutube-dl --no-progress --quiet --ignore-errors $1' > /usr/bin/yd && \
     chmod +x /usr/bin/yd
     
-RUN echo -e '#!/bin/bash\nyoutube-dl --no-progress --quiet --ignore-errors --output "%(playlist_index)s - %(title)s.%(ext)s"' > /usr/bin/ydl && \
+RUN echo -e '#!/bin/bash\nyoutube-dl --no-progress --quiet --ignore-errors --output "%(playlist_index)s - %(title)s.%(ext)s" $1' > /usr/bin/ydl && \
     chmod +x /usr/bin/ydl
     
