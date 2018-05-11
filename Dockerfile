@@ -13,6 +13,9 @@ RUN apt-get update -qq && apt-get install -qqy \
   httrack \
   aria2 \
   git
+  
+RUN echo "alias yd=\"youtube-dl --no-progress --quiet --ignore-errors\"" >> ~/.bashrc
+RUN echo "alias ydl=\"youtube-dl --no-progress --quiet --ignore-errors  --output '%(playlist_index)s - %(title)s.%(ext)s'\"" >> ~/.bashrc
     
 #Install last youtube-dl version
 
